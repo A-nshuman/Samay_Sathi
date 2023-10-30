@@ -16,6 +16,8 @@ body .logo {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  top: 20px;
 }
 body .logo .hands {
   display: flex;
@@ -39,7 +41,7 @@ body .logo .hands .secHand {
   background-image: linear-gradient(90deg, black 50%, rgba(255, 255, 255, 0) 50%);
   width: 50px;
   height: 2px;
-  transform: rotate(90deg);
+  transform: rotate(0deg);
   animation: rotate 60s linear infinite;
 }
 body .logo .hands .dot {
@@ -128,20 +130,35 @@ body .container .anim {
 
 @keyframes rotate {
   0% {
-    transform: rotate(0deg);
+    transform: rotate(90deg);
   }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(450deg);
   }
 }
 @media (max-width: 500px) {
   body {
     margin: 8px;
   }
-  .container {
-    width: 300px;
+  body .container {
+    width: 90%;
   }
-  .container .timePanel h1 {
+  body .container .timePanel h1 {
     font-size: 40px;
+  }
+}
+@media (max-height: 550px) {
+  body .logo .hands {
+    width: 100px;
+    height: 100px;
+  }
+  body .logo .hands .minHand {
+    width: 50px;
+  }
+  body .logo .hands .secHand {
+    width: 25px;
+  }
+  body .logo img {
+    width: 100px;
   }
 }/*# sourceMappingURL=style.css.map */

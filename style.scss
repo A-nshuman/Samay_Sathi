@@ -16,6 +16,8 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+        position: absolute;
+        top: 20px;
 
         .hands {
             display: flex;
@@ -40,7 +42,7 @@ body {
                 background-image: linear-gradient(90deg, black 50%, rgba(255, 255, 255, 0) 50%);
                 width: 50px;
                 height: 2px;
-                transform: rotate(90deg);
+                transform: rotate(0deg);
                 animation: rotate 60s linear infinite;
             }
 
@@ -141,25 +143,47 @@ body {
 
 @keyframes rotate {
     0% {
-        transform: rotate(0deg);
+        transform: rotate(90deg);
     }
 
     100% {
-        transform: rotate(360deg);
+        transform: rotate(450deg);
     }
 }
 
 @media (max-width:500px) {
     body {
         margin: 8px;
+
+        .container {
+            width: 90%;
+
+            .timePanel {
+                h1 {
+                    font-size: 40px;
+                }
+            }
+        }
     }
+}
 
-    .container {
-        width: 300px;
+@media (max-height:550px) {
+    body {
+        .logo {
+            .hands {
+                width: 100px;
+                height: 100px;
 
-        .timePanel {
-            h1 {
-                font-size: 40px;
+                .minHand {
+                    width: 50px;
+                }
+
+                .secHand {
+                    width: 25px;
+                }
+            }
+            img{
+                width: 100px;
             }
         }
     }
