@@ -31,7 +31,6 @@ body .logo .hands {
 body .logo .hands .minHand {
   position: absolute;
   background-image: linear-gradient(90deg, black 50%, rgba(255, 255, 255, 0) 50%);
-  background-color: black;
   width: 100px;
   height: 2px;
   transform: rotate(0deg);

@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', function () {
         const sec = currentTime.getSeconds().toString().padStart(2, '0');
         const tewlveHour = hours % 12 || 12;
 
-        var minHand = document.getElementById('minHand')
-        var hourHand = document.getElementById('hourHand')
+        const minHand = document.getElementById('minHand')
+        const hourHand = document.getElementById('hourHand')
         
         // Theme change
         if (hours < 12) {
