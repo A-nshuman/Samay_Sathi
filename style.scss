@@ -31,13 +31,14 @@ body {
             .minHand {
                 position: absolute;
                 background-image: linear-gradient(90deg, black 50%, rgba(255, 255, 255, 0) 50%);
+                // background-color: linear-gradient(90deg, black 50%, rgba(255, 255, 255, 0) 50%);
                 width: 100px;
                 height: 2px;
                 transform: rotate(0deg);
                 animation: rotate 5s linear infinite;
             }
 
-            .secHand {
+            .hourHand {
                 position: absolute;
                 background-image: linear-gradient(90deg, black 50%, rgba(255, 255, 255, 0) 50%);
                 width: 50px;
@@ -178,7 +179,7 @@ body {
                     width: 50px;
                 }
 
-                .secHand {
+                .hourHand {
                     width: 25px;
                 }
             }

@@ -8,23 +8,34 @@ document.addEventListener('DOMContentLoaded', function () {
         const mins = currentTime.getMinutes().toString().padStart(2, '0');
         const sec = currentTime.getSeconds().toString().padStart(2, '0');
         const tewlveHour = hours % 12 || 12;
+
+        const minHand = document.getElementById('minHand')
+        const hourHand = document.getElementById('hourHand')
         
         // Theme change
         if (hours < 12) {
             document.body.classList.add('morningTheme');
             document.body.classList.remove('nightTheme', 'afternoonTheme', 'eveningTheme');
+            minHand.style.backgroundImage = 'linear-gradient(90deg, black 50%, rgba(255, 255, 255, 0) 50%)'
+            hourHand.style.backgroundImage = 'linear-gradient(90deg, black 50%, rgba(255, 255, 255, 0) 50%)'
         }
         else if (hours < 16) {
             document.body.classList.add('afternoonTheme');
             document.body.classList.remove('nightTheme', 'morningTheme', 'eveningTheme');
+            minHand.style.backgroundImage = 'linear-gradient(90deg, black 50%, rgba(255, 255, 255, 0) 50%)'
+            hourHand.style.backgroundImage = 'linear-gradient(90deg, black 50%, rgba(255, 255, 255, 0) 50%)'
         }
         else if (hours < 20) {
             document.body.classList.add('eveningTheme');
             document.body.classList.remove('nightTheme', 'morningTheme', 'afternoonTheme');
+            minHand.style.backgroundImage = 'linear-gradient(90deg, white 50%, rgba(255, 255, 255, 0) 50%)'
+            hourHand.style.backgroundImage = 'linear-gradient(90deg, white 50%, rgba(255, 255, 255, 0) 50%)'
         }
         else {
             document.body.classList.add('nightTheme');
             document.body.classList.remove('morningTheme', 'afternoonTheme', 'eveningTheme');
+            minHand.style.backgroundColor = 'linear-gradient(90deg, white 50%, rgba(255, 255, 255, 0) 50%)'
+            hourHand.style.backgroundImage = 'linear-gradient(90deg, white 50%, rgba(255, 255, 255, 0) 50%)'
         }
         
         // Display Time
