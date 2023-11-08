@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
         else {
             document.body.classList.add('nightTheme');
             document.body.classList.remove('morningTheme', 'afternoonTheme', 'eveningTheme');
-            minHand.style.backgroundColor = 'linear-gradient(90deg, white 50%, rgba(255, 255, 255, 0) 50%)'
+            minHand.style.backgroundImage = 'linear-gradient(90deg, white 50%, rgba(255, 255, 255, 0) 50%)'
             hourHand.style.backgroundImage = 'linear-gradient(90deg, white 50%, rgba(255, 255, 255, 0) 50%)'
         }
         
